@@ -93,7 +93,6 @@ projects.forEach((p, i) => {
   card.className = p.featured ? "project-card featured" : "project-card";
   card.innerHTML = `
     <div class="project-mat" style="--mat: ${p.mat}">
-      <span class="project-flag">Agency</span>
       ${p.images.length > 1 ? `<span class="project-pages">1 / ${p.images.length}</span>` : ""}
       <img src="${p.images[0]}" alt="${p.title} website" width="1440" height="900" loading="lazy">
     </div>

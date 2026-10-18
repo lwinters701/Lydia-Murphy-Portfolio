@@ -368,12 +368,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 .project-card.featured .project-mat img { aspect-ratio: 2 / 1; }
 .project-card.featured h3 { font-size: clamp(28px, 3.4vw, 40px); }
 
-.project-flag {
-  position: absolute; top: 0; left: clamp(18px, 3vw, 32px);
-  background: var(--ivory);
-  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
-  padding: 5px 10px;
-}
 .project-pages {
   position: absolute; top: 0; right: clamp(18px, 3vw, 32px);
   background: var(--ivory);
@@ -516,11 +510,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 
 .contact {
   position: relative;
-  background-color: var(--blush);
-  background-image:
-    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.28) 0 2px, transparent 3px),
-    radial-gradient(circle at 70% 70%, rgba(255,255,255,0.28) 0 2px, transparent 3px);
-  background-size: 34px 34px;
+  /* Block-print floral repeat */
+  background: #e2d48e url("images/floral.svg") repeat;
+  background-size: 128px 164px;
   text-align: center;
   padding: clamp(96px, 12vw, 140px) var(--gutter) clamp(80px, 10vw, 120px);
 }
@@ -529,21 +521,30 @@ ul { list-style: none; margin: 0; padding: 0; }
   background-image: radial-gradient(circle at 24px 0, var(--cocoa) 23.5px, transparent 24px);
 }
 
-.contact-inner { max-width: 760px; margin: 0 auto; }
+.contact-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  background: var(--ivory);
+  border: 1px solid var(--line);
+  outline: 1px solid var(--ivory);
+  outline-offset: 8px;
+  padding: clamp(40px, 6vw, 72px) clamp(20px, 5vw, 64px);
+  box-shadow: 0 30px 60px -30px rgba(58, 49, 40, 0.35);
+}
 .contact .script { color: var(--cocoa); font-size: 28px; }
 .contact h2 { font-size: clamp(36px, 5vw, 58px); font-weight: 300; color: var(--cocoa); margin-bottom: 20px; }
 .contact-inner > p { color: var(--ink); max-width: 56ch; margin: 0 auto 44px; }
 
 .contact-links {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 1.5fr 1fr 1fr;
   gap: 14px;
 }
 .contact-link {
-  background: var(--ivory);
+  background: var(--cream);
   padding: 22px 16px;
   text-decoration: none;
-  border: 1px solid transparent;
+  border: 1px solid var(--line);
   transition: transform 0.25s, border-color 0.25s;
 }
 .contact-link:hover { transform: translateY(-4px); border-color: var(--cocoa); }
