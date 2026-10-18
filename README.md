@@ -16,6 +16,10 @@ python3 -m http.server 8000
 - `images/` — portraits and project screenshots (WebP), the floral pattern, and `og-image.jpg` (link-preview card)
 - `og-src/og.html` — source for the link-preview card; open it at 1200×630 and screenshot to regenerate
 
+## Résumé
+
+`resume/resume.html` is the source; `resume/Lydia-Murphy-Resume.pdf` is what the site links to. After editing the HTML, regenerate the PDF by printing the page to PDF (US Letter, background graphics on, no margins) — or with Playwright: `page.pdf({ format: "Letter", printBackground: true, preferCSSPageSize: true })`.
+
 ## Visitor stats
 
 Uses [GoatCounter](https://www.goatcounter.com) (free, no cookies). Set `GOATCOUNTER_CODE` at the top of `script.js` to switch it on. Tracks page views, project pop-up opens, and contact-link clicks.
