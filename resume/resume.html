@@ -1,0 +1,175 @@
+<!doctype html>
+<!-- Source for Lydia-Murphy-Resume.pdf. Edit here, then regenerate the PDF (see README). -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lydia Murphy — Résumé</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #f7f1e5; --ivory: #fbf8f1; --sage: #a9b892; --olive: #5f6b45;
+    --blue: #c9dbe0; --peach: #f4c4a6; --ink: #3a3128; --ink-soft: #6b5f52;
+    --line: rgba(58, 49, 40, 0.18);
+  }
+  @page { size: letter; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    width: 8.5in; height: 11in;
+    background: var(--ivory);
+    color: var(--ink);
+    font-family: "Jost", Arial, sans-serif;
+    font-size: 9.4pt;
+    line-height: 1.45;
+    overflow: hidden;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    display: grid;
+    grid-template-rows: auto 1fr;
+  }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 400; margin: 0; }
+  p { margin: 0; }
+  ul { margin: 0; padding: 0; list-style: none; }
+  a { color: inherit; text-decoration: none; }
+
+  /* Placeholder text still to be filled in */
+  .fill { background: #fde2cf; outline: 1px dashed #d98b5f; padding: 0 3px; }
+
+  /* Header: ticking-stripe band like the site hero */
+  header {
+    background: repeating-linear-gradient(90deg, var(--blue) 0 5px, #dfe9eb 5px 7px, var(--blue) 7px 8px, var(--ivory) 8px 16px);
+    padding: 0.26in 0.5in;
+  }
+  .head-card {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.28in;
+    padding: 0.2in 0.3in;
+  }
+  .mono {
+    width: 0.74in; height: 0.74in; border-radius: 50%;
+    background: var(--olive); color: var(--cream);
+    display: grid; place-items: center;
+    font-family: "Fraunces", serif; font-style: italic; font-size: 20pt;
+    box-shadow: 0 0 0 3px var(--cream), 0 0 0 4px var(--olive);
+  }
+  h1 { font-size: 28pt; font-weight: 300; line-height: 1; }
+  .role { font-size: 8pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--olive); margin-top: 6px; font-weight: 500; }
+  .tag { font-family: "Fraunces", serif; font-style: italic; font-weight: 300; color: var(--olive); font-size: 11pt; margin-top: 2px; }
+  .contact { text-align: right; font-size: 8.8pt; line-height: 1.7; }
+
+  main {
+    display: grid; grid-template-columns: 2.25in 1fr;
+  }
+  aside {
+    background: var(--cream);
+    border-right: 1px solid var(--line);
+    padding: 0.32in 0.3in 0.3in 0.5in;
+  }
+  .content { padding: 0.32in 0.5in 0.3in 0.36in; }
+
+  h2 {
+    font-size: 7.6pt; font-family: "Jost", sans-serif; font-weight: 500;
+    letter-spacing: 0.24em; text-transform: uppercase; color: var(--olive);
+    padding-bottom: 5px; border-bottom: 1px solid var(--line); margin-bottom: 10px;
+  }
+  section + section { margin-top: 0.18in; }
+
+  aside h3 { font-size: 10.5pt; margin-bottom: 2px; }
+  aside ul + h3 { margin-top: 9px; }
+  aside li { font-size: 9pt; color: var(--ink-soft); }
+  .edu li { margin-bottom: 9px; }
+  .edu strong { display: block; font-family: "Fraunces", serif; font-weight: 400; font-size: 10pt; color: var(--ink); line-height: 1.3; }
+  .edu span { font-size: 8.6pt; color: var(--ink-soft); }
+
+  .summary { font-size: 10pt; }
+
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .job-head h3 { font-size: 13pt; }
+  .dates { font-size: 8.6pt; color: var(--ink-soft); white-space: nowrap; }
+  .org { font-family: "Fraunces", serif; font-style: italic; font-weight: 300; color: var(--olive); font-size: 10.5pt; margin-bottom: 6px; }
+  .bullets li { position: relative; padding-left: 14px; margin-bottom: 3px; }
+  .bullets li::before { content: "✦"; position: absolute; left: 0; top: 0; color: var(--peach); font-size: 7pt; line-height: 1.5rem; }
+
+  .projects li { display: grid; grid-template-columns: 1.95in 1fr; gap: 10px; padding: 4px 0; border-bottom: 1px solid rgba(58,49,40,0.09); }
+  .projects li:last-child { border-bottom: 0; }
+  .projects strong { font-family: "Fraunces", serif; font-weight: 400; font-size: 10pt; }
+  .projects em { display: block; white-space: nowrap; font-style: normal; font-size: 7pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft); }
+  .projects p { font-size: 9pt; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+  <header>
+    <div class="head-card">
+      <div class="mono">LM</div>
+      <div>
+        <h1>Lydia Murphy</h1>
+        <p class="role">UX/UI Designer · Front-End Developer</p>
+        <p class="tag">Where design meets code</p>
+      </div>
+      <div class="contact">
+        <a href="mailto:lwinters701@gmail.com">lwinters701@gmail.com</a><br>
+        <a href="https://www.linkedin.com/in/lydia-murphy-5b301017a">linkedin.com/in/lydia-murphy</a><br>
+        <span class="fill">portfolio-url.com</span><br>
+        <span class="fill">City, State</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <aside>
+      <section>
+        <h2>Skills &amp; Tools</h2>
+        <h3>Design</h3>
+        <ul><li>Figma</li><li>Adobe Creative Suite</li><li>Prototyping</li><li>User flows &amp; wireframes</li><li>AI-assisted design</li></ul>
+        <h3>Development</h3>
+        <ul><li>HTML / CSS</li><li>Responsive design</li><li>WordPress &amp; Elementor</li><li>Shopify</li><li>BigCommerce</li><li>Claude Code · v0</li></ul>
+        <h3>Research</h3>
+        <ul><li>User interviews</li><li>Usability testing</li><li>A/B testing</li><li>Analytics</li></ul>
+      </section>
+
+      <section class="edu">
+        <h2>Education</h2>
+        <ul>
+          <li><strong>M.S. Career and Technical Education</strong><span><span class="fill">University</span> · <span class="fill">Year</span></span></li>
+          <li><strong>B.A. Graphic Communication</strong><span><span class="fill">University</span> · <span class="fill">Year</span></span></li>
+        </ul>
+      </section>
+    </aside>
+
+    <div class="content">
+      <section>
+        <h2>Profile</h2>
+        <p class="summary">UX/UI designer and front-end developer with five years of agency experience across edtech, e-commerce, fintech, construction, and nonprofit brands. A background in development means my designs are beautiful, realistic, and easy to hand off — from user flows to high-fidelity Figma prototypes to production builds on Shopify, BigCommerce, and WordPress.</p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <div class="job-head">
+          <h3><span class="fill">Job Title</span></h3>
+          <span class="dates"><span class="fill">20XX</span> – Present</span>
+        </div>
+        <p class="org"><span class="fill">Agency Name</span>, <span class="fill">City, State</span></p>
+        <ul class="bullets">
+          <li>Lead UX/UI design for client websites and web apps across edtech, e-commerce, fintech, construction, and nonprofit sectors.</li>
+          <li>Design and build front ends on Shopify, BigCommerce, and WordPress/Elementor, bridging design intent and development.</li>
+          <li>Take projects from user flows and wireframes through high-fidelity Figma prototypes and developer hand-off.</li>
+          <li>Use AI-assisted tools (v0, Claude Code) to prototype faster and communicate ideas clearly to clients and developers.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Selected Projects</h2>
+        <ul class="projects">
+          <li><div><strong>Catholic Charities KC–SJ</strong><em>Nonprofit · WordPress</em></div><p>UX/UI design for a social-services site helping people in crisis find the right program fast, with clear paths for donors and volunteers.</p></li>
+          <li><div><strong>LUMA</strong><em>EdTech · Web app</em></div><p>UX/UI for Pitsco's classroom coding-robot app — block and Python coding for grades 4–6 on shared devices.</p></li>
+          <li><div><strong>Sunnyland Farms</strong><em>E-commerce · BigCommerce</em></div><p>Design and build for a large, seasonal gift catalog, keeping checkout simple during holiday peaks.</p></li>
+          <li><div><strong>Smokin' Keg</strong><em>E-commerce · Shopify</em></div><p>Design and front-end development for a single-product, story-driven storefront.</p></li>
+          <li><div><strong>KE&amp;G</strong><em>Construction · WordPress</em></div><p>Corporate site speaking to both clients and job seekers, showcasing completed project work.</p></li>
+          <li><div><strong>MSG Payment Systems</strong><em>Fintech · WordPress</em></div><p>Design and build routing three B2B audiences to the right solution without jargon.</p></li>
+          <li><div><strong>Vintage Labs</strong><em>E-commerce · Shopify</em></div><p>Design and front-end development for a calm, clinical supplement storefront.</p></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
