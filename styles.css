@@ -197,8 +197,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   max-width: var(--max);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
+  justify-items: center;
 }
 
 .hero-card {
@@ -208,8 +207,10 @@ ul { list-style: none; margin: 0; padding: 0; }
   border: 1px solid var(--line);
   outline: 1px solid var(--cream);
   outline-offset: 8px;
-  padding: clamp(64px, 7vw, 88px) clamp(28px, 5vw, 64px) clamp(36px, 5vw, 56px);
-  margin-right: -80px;
+  width: 100%;
+  max-width: 780px;
+  margin-top: 96px;
+  padding: 130px clamp(20px, 5vw, 64px) clamp(36px, 5vw, 56px);
   text-align: center;
   box-shadow: 0 30px 60px -30px rgba(58, 49, 40, 0.35);
 }
@@ -217,7 +218,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 .seal {
   position: absolute;
   top: 0; left: 50%;
-  width: 112px; height: 112px;
+  width: 200px; height: 200px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: var(--olive);
@@ -233,11 +234,16 @@ ul { list-style: none; margin: 0; padding: 0; }
 .seal-ring text {
   fill: var(--cream);
   font-family: var(--sans);
-  font-size: 10.5px;
+  font-size: 9px;
   letter-spacing: 0.24em;
   text-transform: uppercase;
 }
-.seal-mono { font-family: var(--serif); font-style: italic; font-size: 30px; line-height: 1; }
+.seal-photo {
+  width: 150px; height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--cream);
+}
 
 @keyframes spin { to { transform: rotate(360deg); } }
 
@@ -261,22 +267,6 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 .hero-actions { display: flex; gap: 28px; justify-content: center; align-items: center; flex-wrap: wrap; }
-
-.hero-photo {
-  margin: 0;
-  position: relative;
-  padding: 14px;
-  background: var(--ivory);
-  box-shadow: 0 30px 60px -30px rgba(58, 49, 40, 0.4);
-}
-.hero-photo::before {
-  /* offset sage block behind the photo */
-  content: "";
-  position: absolute; z-index: -1;
-  inset: 32px -22px -22px 32px;
-  background: var(--sage);
-}
-.hero-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 20%; }
 
 /* ---------- Ticker ---------- */
 
@@ -642,10 +632,6 @@ ul { list-style: none; margin: 0; padding: 0; }
   .nav-toggle { display: flex; }
   .wordmark { text-align: left; }
 
-  .hero-inner { grid-template-columns: 1fr; }
-  .hero-photo { order: 1; width: min(420px, 82%); margin: 0 auto 80px; }
-  .hero-photo::before { inset: 20px -14px -14px 20px; }
-  .hero-card { order: 2; margin: 0; }
 
   .about { background: linear-gradient(180deg, var(--slate) 0 260px, var(--blue) 260px 100%); }
   .about-inner, .skills-inner { grid-template-columns: 1fr; }
