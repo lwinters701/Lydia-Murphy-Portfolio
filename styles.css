@@ -364,6 +364,10 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .project-card:hover .project-mat img { transform: translateY(-6px); }
 
+.project-card.featured { grid-column: 1 / -1; }
+.project-card.featured .project-mat img { aspect-ratio: 2 / 1; }
+.project-card.featured h3 { font-size: clamp(28px, 3.4vw, 40px); }
+
 .project-flag {
   position: absolute; top: 0; left: clamp(18px, 3vw, 32px);
   background: var(--ivory);

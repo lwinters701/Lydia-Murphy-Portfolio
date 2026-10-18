@@ -1,6 +1,22 @@
 // Project data — edit here to add, remove, or reorder projects.
 const projects = [
   {
+    title: "Catholic Charities",
+    subtitle: "Kansas City–St. Joseph",
+    overview: "Catholic Charities of Kansas City–St. Joseph walks alongside neighbors facing hardship — from pregnancy through the senior years — with programs spanning food, housing, veterans' services, workforce training, and deaf and disability support. The site needed to help people in crisis find the right service quickly, while giving donors and volunteers a clear path to get involved.",
+    role: "Led UX/UI design, as part of an agency team.",
+    tools: ["Figma", "WordPress", "v0"],
+    tags: ["Nonprofit", "WordPress"],
+    images: [
+      "images/projects/catholiccharities-1.jpg",
+      "images/projects/catholiccharities-2.jpg",
+      "images/projects/catholiccharities-3.jpg",
+    ],
+    liveUrl: "https://catholiccharities-kcsj.org/",
+    mat: "var(--blush)",
+    featured: true,
+  },
+  {
     title: "LUMA",
     subtitle: "Classroom Coding Robot",
     overview: "LUMA is Pitsco Education's coding robot for grades 4–6, paired with a web app where students write block or Python code, run it, and watch it move in real time. The app needed to work reliably on shared classroom devices with no installs, while staying approachable for first-time coders.",
@@ -74,7 +90,7 @@ const grid = document.getElementById("project-grid");
 
 projects.forEach((p, i) => {
   const card = document.createElement("article");
-  card.className = "project-card";
+  card.className = p.featured ? "project-card featured" : "project-card";
   card.innerHTML = `
     <div class="project-mat" style="--mat: ${p.mat}">
       <span class="project-flag">Agency</span>
@@ -94,6 +110,8 @@ projects.forEach((p, i) => {
   card.addEventListener("click", () => openProject(i));
   grid.appendChild(card);
 });
+
+document.querySelector(".count-badge").textContent = String(projects.length).padStart(2, "0");
 
 // ---------- Project pop-up ----------
 
