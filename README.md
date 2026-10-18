@@ -17,4 +17,4 @@ python3 -m http.server 8000
 
 ## Hosting
 
-Works as-is on GitHub Pages: Settings → Pages → deploy from the `main` branch, root folder.
+Deployed on Netlify from the `main` branch. `netlify.toml` tells Netlify there's no build step and to publish the repo root, so every push to `main` redeploys the site automatically.
