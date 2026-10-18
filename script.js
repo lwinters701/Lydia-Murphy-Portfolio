@@ -1,3 +1,7 @@
+// Visitor stats (GoatCounter — free, no cookies). Set this to your GoatCounter
+// code to switch tracking on, e.g. "lydiamurphy" for lydiamurphy.goatcounter.com.
+const GOATCOUNTER_CODE = "";
+
 // Project data — edit here to add, remove, or reorder projects.
 const projects = [
   {
@@ -8,9 +12,9 @@ const projects = [
     tools: ["Figma", "WordPress", "v0"],
     tags: ["Nonprofit", "WordPress"],
     images: [
-      "images/projects/catholiccharities-1.jpg",
-      "images/projects/catholiccharities-2.jpg",
-      "images/projects/catholiccharities-3.jpg",
+      "images/projects/catholiccharities-1.webp",
+      "images/projects/catholiccharities-2.webp",
+      "images/projects/catholiccharities-3.webp",
     ],
     liveUrl: "https://catholiccharities-kcsj.org/",
     mat: "var(--blush)",
@@ -23,7 +27,7 @@ const projects = [
     role: "Led UX/UI design as part of an agency team. Development was handled by a separate team.",
     tools: ["Figma"],
     tags: ["EdTech", "UX/UI Design"],
-    images: ["images/projects/luma-1.jpg"],
+    images: ["images/projects/luma-1.webp"],
     liveUrl: "https://luma.pitsco.com/",
     mat: "var(--blue)",
   },
@@ -34,7 +38,7 @@ const projects = [
     role: "Led UX/UI design and contributed to building out the site on BigCommerce, as part of an agency team.",
     tools: ["Figma", "BigCommerce"],
     tags: ["E-Commerce", "BigCommerce"],
-    images: ["images/projects/sunnyland-1.jpg"],
+    images: ["images/projects/sunnyland-1.webp"],
     liveUrl: "https://www.sunnylandfarms.com/",
     mat: "var(--butter)",
   },
@@ -45,7 +49,7 @@ const projects = [
     role: "Led UX/UI design and front-end development on Shopify, as part of an agency team.",
     tools: ["Figma", "Shopify"],
     tags: ["E-Commerce", "Shopify"],
-    images: ["images/projects/smokinkegs-1.jpg"],
+    images: ["images/projects/smokinkegs-1.webp"],
     liveUrl: "https://smokinkegs.com/",
     mat: "var(--peach)",
   },
@@ -56,7 +60,7 @@ const projects = [
     role: "Led UX/UI design on WordPress, as part of an agency team, with limited front-end involvement.",
     tools: ["Figma", "WordPress"],
     tags: ["Construction", "WordPress"],
-    images: ["images/projects/kegtus-1.jpg", "images/projects/kegtus-2.jpg"],
+    images: ["images/projects/kegtus-1.webp", "images/projects/kegtus-2.webp"],
     liveUrl: "https://www.kegtus.com/",
     mat: "var(--sage)",
   },
@@ -67,7 +71,7 @@ const projects = [
     role: "Led UX/UI design and development on WordPress (Elementor), as part of an agency team.",
     tools: ["Figma", "WordPress", "Elementor"],
     tags: ["Fintech", "WordPress"],
-    images: ["images/projects/msgpay-1.jpg"],
+    images: ["images/projects/msgpay-1.webp"],
     liveUrl: "https://msgpay.com/",
     mat: "var(--blush)",
   },
@@ -78,7 +82,7 @@ const projects = [
     role: "Led UX/UI design and front-end development on Shopify, as part of an agency team.",
     tools: ["Figma", "Shopify"],
     tags: ["E-Commerce", "Shopify"],
-    images: ["images/projects/vintagelabs-1.jpg"],
+    images: ["images/projects/vintagelabs-1.webp"],
     liveUrl: "https://vintagelabscollection.com/",
     mat: "var(--cream)",
   },
@@ -94,7 +98,7 @@ projects.forEach((p, i) => {
   card.innerHTML = `
     <div class="project-mat" style="--mat: ${p.mat}">
       ${p.images.length > 1 ? `<span class="project-pages">1 / ${p.images.length}</span>` : ""}
-      <img src="${p.images[0]}" alt="${p.title} website" width="1440" height="900" loading="lazy">
+      <img src="${p.images[0]}" alt="${p.title} website" width="1200" height="750" loading="lazy">
     </div>
     <div class="project-info">
       <div>
@@ -141,6 +145,7 @@ function openProject(i) {
   modalNav.hidden = current.images.length < 2;
   showImage();
   modal.showModal();
+  window.goatcounter?.count?.({ path: `project/${current.title}`, title: current.title, event: true });
 }
 
 function step(dir) {
@@ -179,3 +184,11 @@ toggle.addEventListener("click", () => setMenu(menu.hidden));
 menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
 
 document.getElementById("year").textContent = new Date().getFullYear();
+
+if (GOATCOUNTER_CODE) {
+  const gc = document.createElement("script");
+  gc.async = true;
+  gc.src = "https://gc.zgo.at/count.js";
+  gc.dataset.goatcounter = `https://${GOATCOUNTER_CODE}.goatcounter.com/count`;
+  document.head.appendChild(gc);
+}

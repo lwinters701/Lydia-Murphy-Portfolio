@@ -1,7 +1,9 @@
-# Static site — no build step. Netlify serves the repo root as-is.
+# Static site. The only "build" step fills in the site address below.
 [build]
   publish = "."
-  command = ""
+  # Fill in the site's address for the link-preview tags in index.html.
+  # Netlify sets $URL to the site's main address (custom domain once added).
+  command = "sed -i \"s#__SITE_URL__#${URL}#g\" index.html"
 
 [[headers]]
   for = "/images/*"

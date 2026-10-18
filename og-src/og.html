@@ -1,0 +1,44 @@
+<!doctype html>
+<!-- Source for images/og-image.jpg (the link-preview card). Render at 1200x630. -->
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: repeating-linear-gradient(90deg, var(--blue) 0 7px, #dfe9eb 7px 10px, var(--blue) 10px 12px, var(--ivory) 12px 24px);
+    display: grid; place-items: center;
+  }
+  .card {
+    width: 1000px; height: 440px;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    outline: 1px solid var(--cream); outline-offset: 10px;
+    box-shadow: 0 30px 60px -30px rgba(58,49,40,.4);
+    display: grid; grid-template-columns: 300px 1fr; align-items: center; gap: 56px;
+    padding: 0 72px;
+  }
+  .seal { position: relative; transform: none; left: auto; top: auto; width: 290px; height: 290px; }
+  .seal-ring { animation: none; }
+  .seal-ring text { font-size: 9px; }
+  .seal-photo { width: 218px; height: 218px; }
+  .eyebrow { color: var(--olive); font-size: 15px; margin-bottom: 18px; }
+  h1 { font-size: 80px; font-weight: 300; line-height: 1; }
+  .tag { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 40px; color: var(--olive); margin: 18px 0 0; }
+</style></head>
+<body>
+  <div class="card">
+    <div class="seal">
+      <svg viewBox="0 0 120 120" class="seal-ring">
+        <defs><path id="p" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+        <text><textPath href="#p" textLength="286" lengthAdjust="spacing">design for the user ✦ design for the user ✦</textPath></text>
+      </svg>
+      <img class="seal-photo" src="../images/hero-portrait.webp" alt="">
+    </div>
+    <div>
+      <p class="eyebrow">UX/UI Designer <span style="color:var(--sage)">•</span> Front-End Developer</p>
+      <h1>Lydia Murphy</h1>
+      <p class="tag">Where design meets code</p>
+    </div>
+  </div>
+</body></html>
