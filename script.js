@@ -5,6 +5,22 @@ const GOATCOUNTER_CODE = "";
 // Project data — edit here to add, remove, or reorder projects.
 const projects = [
   {
+    title: "Perry's Pork Rinds",
+    subtitle: "Small-Batch Snacks",
+    overview: "Perry's Pork Rinds is a family-owned, small-batch pork rind maker in Bronson, Kansas, selling ten flavors online, wholesale, and through fundraising programs. The storefront needed to carry the brand's bold, playful personality while making it easy to compare flavors and build a custom variety pack — with clear per-bag and per-ounce pricing at every pack size.",
+    role: "Led UX/UI design and front-end development on Shopify, as part of an agency team.",
+    tools: ["Claude Code", "Shopify CLI"],
+    tags: ["E-Commerce", "Shopify"],
+    images: [
+      "images/projects/perrys-1.webp",
+      "images/projects/perrys-2.webp",
+      "images/projects/perrys-3.webp",
+    ],
+    liveUrl: "https://perrysporkrinds.com/",
+    mat: "var(--blue)",
+    featured: true,
+  },
+  {
     title: "Catholic Charities",
     subtitle: "Kansas City–St. Joseph",
     overview: "Catholic Charities of Kansas City–St. Joseph walks alongside neighbors facing hardship — from pregnancy through the senior years — with programs spanning food, housing, veterans' services, workforce training, and deaf and disability support. The site needed to help people in crisis find the right service quickly, while giving donors and volunteers a clear path to get involved.",
