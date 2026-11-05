@@ -26,4 +26,4 @@ Uses [GoatCounter](https://www.goatcounter.com) (free, no cookies). Set `GOATCOU
 
 ## Hosting
 
-Deployed on Netlify from the `main` branch. `netlify.toml` publishes the repo root and fills in the site address for the link-preview tags, so every push to `main` redeploys the site automatically.
+Deployed on Netlify from the `main` branch. `netlify.toml` publishes the repo root and fills in the site address (`__SITE_URL__`) in the link-preview tags, schema.org structured data, `robots.txt` and `sitemap.xml`, so every push to `main` redeploys the site automatically.
